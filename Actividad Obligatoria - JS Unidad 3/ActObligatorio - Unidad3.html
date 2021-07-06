@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad Obligatoria</title>
+  </head>
+  <body>
+    
+    <script>
+        // funcion para saber si el usuario es de mayor edad, mostrando un mensaje
+        const edadMayor = 18;
+        function esMayorEdad(edad) {
+            if (edad >= edadMayor){
+                alert(`El usuario es mayor de edad`); 
+            } else {
+                alert(`El usuario no es mayor de edad`);
+            };
+        }
+
+        // funcion para obtener el usuario de mayor edad
+        function UsuarioMayor(array) {
+            return Math.max.apply(null, array);
+        }
+
+        let usuarios = [];
+        for (let i = 0; i < 3; i++) {
+            // ingreso por pantalla las edades de los usuarios
+            let edad = +prompt("Ingrese la edad del usuario: " + (i+1));
+            usuarios[i] = edad;
+            // llamo a la funcion para saber si es de mayor edad
+            let esMayor = esMayorEdad(edad);
+        }
+
+        // llamo a la funcion para obtener la edad mayor
+        let mayor = UsuarioMayor(usuarios);
+        alert(`La edad de los usuarios ingresados son: ${usuarios} y la edad mayor es: ${mayor}`);
+    </script>
+  </body>
+</html>
